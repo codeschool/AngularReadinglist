@@ -19,29 +19,40 @@ A Book should have:
 * **title** - a text field
 * **authors** - a list of names
 * **ain** - the AIN from Amazon.com (optional)
-* **link** - a link to the book on Amazon.com (optional)
-
-### When I have read a Book from my Reading List, I can add a Review and Rating to it so that I can publish my thoughts.
-
-A Book additionally needs:
-
 * **review** - a few paragraphs of text
-* **rating** - an integer 1 to 5, 5 being the best
+* **rating** - 1 to 5, like stars (or tomatoes)
+* **genre** - a name like "fiction" or "non-fiction"
+
+### I can view a list of all the Books on my Reading List so that I can see which ones I've added.
+
+* For each Book, show:
+    * the cover image (from Amazon.com)
+    * rating (out of max)
+    * the title
+    * author byline
+    * review text
+    * genre(s)
+* Link to Amazon.com:
+    * the cover image
+    * the title
+* Display in the order they were added to the Reading List
+* The URL for a book cover image from Amazon.com can be generated, given the AIN:
+    http://images.amazon.com/images/P/{{book.ain}}.01.ZTZZZZZZ.jpg
+* The URL for a book on Amazon.com can be generated, given the AIN:
+    http://www.amazon.com/gp/product/{{book.ain}}
 
 ### I can edit a Book on my Reading List so that I can add or update the information about it.
 
+* Essentially opens the "New Review" form for the existing Book
+
 ### I can mark a Book as "READ" or "READING" so that I can remind myself which ones I've already read.
 
-A Book additionally needs:
-
-* **currently** - a state indicator of "UNREAD", "READ" or "READING"
+Add **currently** to Book, a state indicator of "UNREAD", "READ" or "READING"
 
 Reminders:
 
 * Don't forget to update the "Edit Book" form!
 * Maybe provide an easier way to update than editing it?
-
-### I can view a list of all the Books on my Reading List so that I can see which ones I've added.
 
 ### I can _sort_ the list of Books so that I can see which ones to read next.
 
