@@ -1,3 +1,5 @@
-'use strict';
+(function(){
+  'use strict';
 
-angular.module('readingList', [ ]);
+  angular.module('readingList', [ ]);
+})();
